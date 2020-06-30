@@ -1,0 +1,19 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:host {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+  }
+
+  footer {
+    mat-toolbar {
+      mat-icon {
+        font-size: 30px;
+      }
+    }
+  }
+}
