@@ -1,1 +1,9 @@
-<zxing-scanner (scanComplete)="scanCompleteHandler($event)"></zxing-scanner>
+<zxing-scanner
+  [formats]="['QR_CODE', 'EAN_13', 'CODE_128', 'DATA_MATRIX']"
+  (scanSuccess)="scanSuccessHandler($event)"
+>
+</zxing-scanner>
+
+<mat-list role="list">
+  <mat-list-item *ngFor="let item of cartItems$ | async" role="listitem">{{item.ean}}</mat-list-item>
+</mat-list>

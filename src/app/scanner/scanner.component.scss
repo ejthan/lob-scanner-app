@@ -1,0 +1,9 @@
+:host {
+  zxing-scanner {
+    video {
+      max-height: 50vh;
+      width: 100vw;
+      object-fit: contain;
+    }
+  }
+}

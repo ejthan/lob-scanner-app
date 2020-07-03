@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ScannerComponent } from './scanner/scanner.component';
-
 const routes: Routes = [
   {
     path: 'scanner',
-    component: ScannerComponent
+    loadChildren: () => import('./scanner/scanner.module').then(m => m.ScannerModule)
   },
   {
-    path: '',
-    redirectTo: '',
-    pathMatch: 'full'
+    path: 'quagga',
+    loadChildren: () => import('./scanner-quagga/scanner-quagga.module').then(m => m.ScannerQuaggaModule)
   }
 ];
 

@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "lob-scanner-app"
+  "defaultProject": "lob-scanner-app",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }

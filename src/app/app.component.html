@@ -4,15 +4,14 @@
 
 <footer>
   <mat-toolbar>
-    <div fxLayout="row" fxFlexFill fxLayoutAlign="space-around center">
+    <div fxLayout="row" fxFlexFill fxLayoutAlign="space-around center" (click)="transitionToRoute('quagga')">
       <button mat-icon-button fxLayoutAlign="center center">
         <mat-icon fontSet="fa" fontIcon="fa-barcode"></mat-icon>
+        Quagga
       </button>
       <button mat-icon-button fxLayoutAlign="center center" (click)="transitionToRoute('scanner')">
         <mat-icon fontSet="fa" fontIcon="fa-barcode"></mat-icon>
-      </button>
-      <button mat-icon-button fxLayoutAlign="center center">
-        <mat-icon fontSet="fa" fontIcon="fa-barcode"></mat-icon>
+        ZXING
       </button>
     </div>
   </mat-toolbar>

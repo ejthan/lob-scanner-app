@@ -1,0 +1,17 @@
+app-scanner-quagga {
+  mat-list {
+    max-height: 30vh;
+    overflow: auto;
+  }
+
+  .viewport {
+    max-height: 50vh;
+    video {
+      width: 100vw;
+      max-height: 50vh;
+      object-fit: contain;
+    }
+}
+
+
+}

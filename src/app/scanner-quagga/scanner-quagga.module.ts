@@ -1,26 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { ScannerQuaggaComponent } from './scanner-quagga.component';
 
 import { MatListModule } from '@angular/material/list';
-
-import { ScannerComponent } from './scanner.component';
-import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: ScannerComponent
+    component: ScannerQuaggaComponent
   }
 ];
 
 @NgModule({
-  declarations: [ScannerComponent],
+  declarations: [ScannerQuaggaComponent],
   imports: [
     CommonModule,
     MatListModule,
-    ZXingScannerModule,
     RouterModule.forChild(routes)
   ]
 })
-export class ScannerModule { }
+export class ScannerQuaggaModule { }
