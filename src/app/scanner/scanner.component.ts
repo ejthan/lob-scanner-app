@@ -12,4 +12,8 @@ export class ScannerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scanCompleteHandler(event): void {
+    console.log(event);
+  }
+
 }

@@ -9,21 +9,26 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScannerModule } from './scanner/scanner.module';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FlexLayoutModule,
     MatToolbarModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
-    ScannerModule
+    environment.production ? [] : AkitaNgDevtools.forRoot()
   ],
-  providers: [MatIconRegistry],
+  providers: [
+    MatIconRegistry,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {
