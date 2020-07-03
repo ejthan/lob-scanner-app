@@ -1,4 +1,10 @@
 :host {
+
+  mat-list {
+    max-height: 30vh;
+    overflow: auto;
+  }
+
   zxing-scanner {
     video {
       max-height: 50vh;

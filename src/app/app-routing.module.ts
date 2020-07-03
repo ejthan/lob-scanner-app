@@ -9,7 +9,8 @@ const routes: Routes = [
   {
     path: 'quagga',
     loadChildren: () => import('./scanner-quagga/scanner-quagga.module').then(m => m.ScannerQuaggaModule)
-  }
+  },
+  { path: '',   redirectTo: '/scanner', pathMatch: 'full' },
 ];
 
 @NgModule({

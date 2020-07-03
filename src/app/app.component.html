@@ -4,12 +4,12 @@
 
 <footer>
   <mat-toolbar>
-    <div fxLayout="row" fxFlexFill fxLayoutAlign="space-around center" (click)="transitionToRoute('quagga')">
-      <button mat-icon-button fxLayoutAlign="center center">
+    <div fxLayout="row" fxFlexFill fxLayoutAlign="space-around center" >
+      <button mat-icon-button fxLayoutAlign="center center" [routerLink]="['/quagga']">
         <mat-icon fontSet="fa" fontIcon="fa-barcode"></mat-icon>
         Quagga
       </button>
-      <button mat-icon-button fxLayoutAlign="center center" (click)="transitionToRoute('scanner')">
+      <button mat-icon-button fxLayoutAlign="center center" [routerLink]="['/scanner']">
         <mat-icon fontSet="fa" fontIcon="fa-barcode"></mat-icon>
         ZXING
       </button>
