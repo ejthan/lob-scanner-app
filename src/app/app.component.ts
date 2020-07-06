@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+import {AppUpdateService} from './core/services/app-update.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,7 +11,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   showFiller = false;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private appUpdateService: AppUpdateService) {
 
   }
 

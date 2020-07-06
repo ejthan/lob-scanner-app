@@ -3,6 +3,7 @@ import { SwUpdate } from '@angular/service-worker';
 
 import { UpdateDialogComponent } from '../components/update-dialog/update-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ export class AppUpdateService {
 
   constructor(
     private readonly updates: SwUpdate,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private _snackBar: MatSnackBar
   ) {
     this.updates.available.subscribe(event => {
       this.showAppUpdateAlert();
@@ -19,15 +21,8 @@ export class AppUpdateService {
   }
 
   showAppUpdateAlert(): void {
-
-    const dialogRef = this.dialog.open(UpdateDialogComponent, {
-      width: '80vw'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
-      this.doAppUpdate();
-    });
+    const snackBarRef = this._snackBar.open('Please update the catalog to the newest version', 'Update', { duration: 5000 });
+    snackBarRef.onAction().subscribe(() => this.doAppUpdate());
   }
 
   doAppUpdate(): void {

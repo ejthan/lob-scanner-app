@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppUpdateService } from './services/app-update.service';
 import { BeepService } from './services/beep.service';
@@ -11,7 +11,7 @@ import { UpdateDialogComponent } from './components/update-dialog/update-dialog.
   declarations: [UpdateDialogComponent],
   imports: [
     CommonModule,
-    MatDialogModule
+    MatSnackBarModule
   ],
   entryComponents: [
     UpdateDialogComponent
