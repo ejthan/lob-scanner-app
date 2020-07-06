@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
 
 import Quagga from 'quagga';
 import { BaseComponent } from 'lob-base';
-import { BeepService } from '../services/beep.service';
+import { BeepService } from '../core/services/beep.service';
 import { ShoppingCartService } from '../state/shopping-cart.service';
 import { ShoppingCartQuery } from '../state/shopping-cart.query';
 import { ShoppingCart, createShoppingCart } from '../state/shopping-cart.model';
