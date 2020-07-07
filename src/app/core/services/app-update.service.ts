@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 
-import { UpdateDialogComponent } from '../components/update-dialog/update-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
@@ -12,7 +10,6 @@ export class AppUpdateService {
 
   constructor(
     private readonly updates: SwUpdate,
-    public dialog: MatDialog,
     private _snackBar: MatSnackBar
   ) {
     this.updates.available.subscribe(event => {

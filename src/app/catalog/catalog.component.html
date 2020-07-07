@@ -1,0 +1,5 @@
+
+<mat-action-list role="list">
+  <button mat-list-item *ngFor="let item of groupBreadcrumb; let i = index" (click)="parentNavItemClicked(item, i)">{{item.groupName}}</button>
+  <button mat-list-item *ngFor="let item of groupByLevel" (click)="navItemClicked(item)">{{item.groupName}}</button>
+</mat-action-list>

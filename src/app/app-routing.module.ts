@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'catalog',
+    loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule)
+  },
+  {
     path: 'scanner',
     loadChildren: () => import('./scanner/scanner.module').then(m => m.ScannerModule)
   },
@@ -10,7 +14,7 @@ const routes: Routes = [
     path: 'quagga',
     loadChildren: () => import('./scanner-quagga/scanner-quagga.module').then(m => m.ScannerQuaggaModule)
   },
-  { path: '',   redirectTo: '/scanner', pathMatch: 'full' },
+  { path: '',   redirectTo: '/catalog', pathMatch: 'full' },
 ];
 
 @NgModule({

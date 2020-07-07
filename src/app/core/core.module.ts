@@ -5,16 +5,12 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppUpdateService } from './services/app-update.service';
 import { BeepService } from './services/beep.service';
-import { UpdateDialogComponent } from './components/update-dialog/update-dialog.component';
 
 @NgModule({
-  declarations: [UpdateDialogComponent],
+  declarations: [],
   imports: [
     CommonModule,
     MatSnackBarModule
-  ],
-  entryComponents: [
-    UpdateDialogComponent
   ],
   providers: [
     AppUpdateService,

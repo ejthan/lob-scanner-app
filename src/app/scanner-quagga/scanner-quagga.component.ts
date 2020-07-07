@@ -1,13 +1,11 @@
 import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
 
 import Quagga from 'quagga';
-import { BaseComponent } from 'lob-base';
 import { BeepService } from '../core/services/beep.service';
 import { ShoppingCartService } from '../state/shopping-cart.service';
 import { ShoppingCartQuery } from '../state/shopping-cart.query';
 import { ShoppingCart, createShoppingCart } from '../state/shopping-cart.model';
 import { Observable } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-scanner-quagga',
@@ -15,7 +13,7 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./scanner-quagga.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ScannerQuaggaComponent extends BaseComponent implements AfterViewInit {
+export class ScannerQuaggaComponent implements AfterViewInit {
 
   cartItems$: Observable<ShoppingCart[]> = this.shoppingCartQuery.selectAll();
 
@@ -28,7 +26,6 @@ export class ScannerQuaggaComponent extends BaseComponent implements AfterViewIn
     public shoppingCartService: ShoppingCartService,
     private shoppingCartQuery: ShoppingCartQuery
   ) {
-    super();
     this.shoppingCartService.clearStore();
   }
 
