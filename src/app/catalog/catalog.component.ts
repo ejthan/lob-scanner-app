@@ -27,7 +27,6 @@ export class CatalogComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.catalogService.get().subscribe();
     this.parentGroup = this.route.snapshot.params.parentGroupId;
 
     this.catalogQuery.selectAll()
@@ -46,7 +45,7 @@ export class CatalogComponent implements OnInit {
     this.groupByLevel = item.children;
   }
 
-  parentNavItemClicked(item, index) {
+  parentNavItemClicked(item, index): void {
     if (index === 0) {
       this.groupByLevel = this.catalog[0].children;
       this.groupBreadcrumb = [];
